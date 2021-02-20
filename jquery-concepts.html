@@ -1,0 +1,279 @@
+<!-- 
+  Lindsey Gunderson
+  A00965002
+  MDIA 2294 - Web Scripting 1
+ -->
+
+<!DOCTYPE html>
+<html>
+<title>Jquery Concepts</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="css/stylesheet.css">
+
+<body>
+  <header>
+
+    <!-- Navbar for page -->
+    <div class="nav-bar">
+      <div id="navigation-container">
+        <a href="index.html">
+          <img src="images/logo/logo_lg2.png">
+        </a>
+
+        <ul>
+          <li>
+            <a href="js-concepts.html">JavaScript Concepts</a>
+          </li>
+          <li>
+            <a href="jquery-concepts.html">JQuery Concepts</a>
+          </li>
+          <li>
+            <a href="plug-ins.html">Plug-ins</a>
+          </li>
+        </ul>
+      </div>
+      <!-- End of navbar -->
+  </header>
+
+
+  <br>
+  <br>
+  <!-- Tabs for Jquery sections -->
+
+  <h1>JQuery Concepts</h1>
+  <div id="tabs" class="jquery-tabs">
+    <ul>
+      <li>
+        <a href="#jquery">JQuery</a>
+      </li>
+      <li>
+        <a href="#jquery-syntax">Syntax</a>
+      </li>
+      <li>
+        <a href="#dom">Document Object Model (DOM)</a>
+      </li>
+      <li>
+        <a href="#animation-effects">Animations and effects</a>
+      </li>
+    </ul>
+    <!-- End of tabs for jQuery section -->
+
+
+    <!-- What is jQuery section -->
+    <div id="jquery" class="jquery-tabs">
+      <h3>What is jQuery? </h3>
+      <p class="content">
+        JQuery is a JavaScript library which is used to make the use of JavaScript easier on a website. Jquery can take lines of
+        JavaScript code and simplify complex code blocks so Jquery has many built in functions for DOM manipulation, selection,
+        events and even incorporate animations. A couple of advantages to using JQuery are similar to JavaScript so it can
+        be easy to learn, increase in development time because you’re writing less code plus its more readable and you can
+        also include the library remotely for a lightweight option. Google’s API can easily be linked within a script tag
+        at the beginning of your html file.
+        <br>
+        <br> In the next few sections we will focus on: Syntax, Document Object Model and Animations.
+      </p>
+    </div>
+    <!-- End of what is jQuery section -->
+
+
+    <!-- Introduction to JQuery section -->
+    <div id="jquery-syntax" class="jquery-tabs">
+      <h3>1.1 - jQuery selector syntax and selectors</h3>
+      <p class="content">
+        The syntax for JQuery is similar to JavaScript but is condensed for readability. Let's quickly compare the differences with
+        syntax:
+
+        <table>
+          <tr>
+            <th>JavaScript</th>
+            <th>JQuery</th>
+          </tr>
+          <tr>
+            <td> document.method(selector)</td>
+            <td>
+              <i> $(selector).action() </i>
+            </td>
+          </tr>
+        </table>
+      </p>
+
+      <p class="content">
+        As you can see, they are pretty similar in synax.</p>
+
+      <li>The
+        <b>$</b> defines jQuery and starts our statement.
+      </li>
+      <li>
+        The
+        <b>selector</b> will be the element we are locating or trying to find.
+      </li>
+      <li>
+        The
+        <b>action()</b> refers to the action that we want to preform on the element.
+      </li>
+      </ul>
+
+      <p class="content">Let's see how this works in an example:
+      </p>
+
+      <table>
+        <tr>
+          <th>JavaScript</th>
+          <th>JQuery</th>
+        </tr>
+        <tr>
+          <td> document.getElementById("firstname").value;</td>
+          <td>
+            <i> $("#firstname").val(); </i>
+          </td>
+        </tr>
+      </table>
+
+      <p class="content">
+        In the example above, we are selecting the element by the id that has the name "firstname". They will both return the same
+        value but we should note the # in the jQuery statement. The
+        <b>"#"</b> is used when targetting a id and a
+        <b>"."</b> is used when you are targetting a class. Either the "#" or "." must be within the selector or jQuery will
+        not know what element to grab.
+      </p>
+    </div>
+    <!-- End of JQuery section -->
+
+
+    <!-- DOM section -->
+    <div id="dom" class="jquery-tabs">
+      <h3>2.1 - DOM get and set actions</h3>
+      <p class="content">
+        Now that we know the syntax and how to target elements in jQuery, let's try getting the value from a textbox and display
+        the value.
+      </p>
+
+      <!-- Codepen exampe -->
+      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="wvGKGvE"
+        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+        data-pen-title="wvGKGvE">
+        <span>See the Pen
+          <a href="https://codepen.io/LGundy/pen/wvGKGvE">
+            wvGKGvE</a> by Lindsey (
+          <a href="https://codepen.io/LGundy">@LGundy</a>) on
+          <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+      <!-- End of codepen example -->
+
+      <br>
+      <p class="content">
+        We are using the .val() method to
+        <b>"get"</b> the input value from the textbox and then we
+        <b>"set"</b> the value to the span with the id of "results" with .html(). Using .html() is similar to .innnerHMTL in
+        JavaScript.
+      </p>
+
+    </div>
+    <!-- End of DOM section -->
+
+
+
+    <!-- Animation and Effects section -->
+    <div id="animation-effects" class="jquery-tabs">
+      <h3>3.1 - Animations</h3>
+      <p class="content">
+        With jQuery, we can add simple animations to our html elements. This is possible to do with css, but we can incorporate the
+        css properties and built in jQuery methods to do most of the work for us. In doing so, we have more control of the
+        animation and simplifies our code. Below are a few examples of animations that can be achieved.
+
+        <h3>Increasing font size and moving to the left</h3>
+
+        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="vYGNRPB"
+          style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          data-pen-title="vYGNRPB">
+          <span>See the Pen
+            <a href="https://codepen.io/LGundy/pen/vYGNRPB">
+              vYGNRPB</a> by Lindsey (
+            <a href="https://codepen.io/LGundy">@LGundy</a>) on
+            <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+      </p>
+
+      <p class="content">
+        We can take the css properties and apply those within the
+        <b>"animate()"</b> function that is built into jQuery. The naming for each property varies slightly
+      </p>
+
+
+      <h3>Animating two headers in the same animation function</h3>
+      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="abNvGLg"
+        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+        data-pen-title="animated multi text">
+        <span>See the Pen
+          <a href="https://codepen.io/LGundy/pen/abNvGLg">
+            animated multi text</a> by Lindsey (
+          <a href="https://codepen.io/LGundy">@LGundy</a>) on
+          <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+      <p content="content">
+        Its possible to also animate multiple sections! In the example above, we just include the items that we want to animate within
+        the animate statement and they will both apply the css properties when the button is clicked. Timings have also been
+        added to the two headers (500 and 900ms) to showcase they are animating at the same time but will complete at different
+        speeds.
+
+      </p>
+
+      <h3>3.2 - Effects</h3>
+      <p class="content">
+        In addition to animations, we can also use the library of effects with jQuery and apply them to our elements as well.
+        <a
+          href="https://api.jqueryui.com/category/effects/">
+          <b>jQuery's website</b>
+        </a> goes into more details and lists all the effects that you can use. Let's try making our text fade in and out with
+        a toggle.
+      </p>
+
+      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="poyjVmG"
+        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+        data-pen-title="jQuery togglefade()">
+        <span>See the Pen
+          <a href="https://codepen.io/LGundy/pen/poyjVmG">
+            jQuery togglefade()</a> by Lindsey (
+          <a href="https://codepen.io/LGundy">@LGundy</a>) on
+          <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+    </div>
+    <!-- End of animation and effects section -->
+
+
+
+
+  </div>
+  <br>
+  <br>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Lindsey Gunderson
+      <br> MDIA 2294 - Web Scripting 1
+      <br> BCIT New Media and Web Development Program
+    </p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

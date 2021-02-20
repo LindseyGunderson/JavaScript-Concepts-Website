@@ -1,0 +1,649 @@
+<!-- 
+  Lindsey Gunderson
+  A00965002
+  MDIA 2294 - Web Scripting 1
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<title>JavaScript Concepts</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="css/stylesheet.css">
+
+<body>
+  <header>
+
+    <!-- Navbar for page -->
+    <div class="nav-bar">
+      <div id="navigation-container">
+        <a href="index.html">
+          <img src="images/logo/logo_lg2.png">
+        </a>
+
+        <ul>
+          <li>
+            <a class="nav-link" href="js-concepts.html">JavaScript Concepts</a>
+          </li>
+          <li>
+            <a class="nav-link" href="jquery-concepts.html">JQuery Concepts</a>
+          </li>
+          <li>
+            <a class="nav-link" href="plug-ins.html">Plugins</a>
+          </li>
+        </ul>
+      </div>
+      <!-- End of navbar -->
+  </header>
+
+
+  <br>
+  <br>
+  <!-- Tabs for each section -->
+  <h1>JavaScript Concepts</h1>
+  <div id="tabs">
+    <ul>
+      <li>
+        <a href="#js-tab">JavaScript (JS)</a>
+      </li>
+      <li>
+        <a href="#function-tab">Functions</a>
+      </li>
+      <li>
+        <a href="#conditional-struct">Conditional Structures</a>
+      </li>
+      <li>
+        <a href="#arrays-tab">Arrays or Collections</a>
+      </li>
+    </ul>
+    <!-- End of tabs  -->
+
+
+
+    <!-- What is JS section -->
+    <div id="js-tab">
+      <h2 class="headings">What is JavaScript? </h2>
+      <p class="content">
+        JavaScript is a programming language that allows you to bring more dynamic interactions to the html of your website. This
+        can be used both on client side and server side for more a more engaging website to a user. HTML and CSS can help
+        bring the structure to your website but with the additional implementation of JavaScript, you can open even more
+        opportunities for interactivity.
+
+      </p>
+    </div>
+    <!-- End of JS section -->
+
+
+    <div id="function-tab">
+      <div id="accordion" class="accordion">
+
+        <!-- Functions tab with examples and description -->
+        <h3 class="titles">1.1 - What is a function in JavaScript?</h3>
+        <div>
+          <p class="content">
+            Functions are a great option to use in your code for reusability if you are planning on repeating a task multiple times in
+            any coding language. They are executed when they are called by the defined name given to them which is also known
+            as
+            <b>invoking</b>. You can define your own function by the key word
+            <b>“function”</b>, followed by the name of your funnction, then brackets (which can have parameters - more in the
+            next section) and the code statments enclosed in curly braces.
+            <br>
+            <ul>
+              <li>The following is the syntax for declaring a function:
+              </li>
+            </ul>
+
+            <!-- Code syntax example -->
+            <pre>function <i>functionName</i>(){  statements  } </pre>
+            <!-- End of code syntax example -->
+
+          </p>
+          <p class="content">Let's try it in an example.</p>
+
+
+          <!-- Codepen example code -->
+          <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="LGundy" data-slug-hash="eYZmxoG"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="eYZmxoG">
+            <span>See the Pen
+              <a href="https://codepen.io/LGundy/pen/eYZmxoG">
+                eYZmxoG</a> by Lindsey (
+              <a href="https://codepen.io/LGundy">@LGundy</a>) on
+              <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          <!-- End of codepen example -->
+
+          <p class="content">As you can see, we have declared our first function! We define our function called myName. Once the button is clicked,
+            it will take the name inputting by the user and display the alert responding with the name that was inputted.
+          </p>
+
+          <p class="content">Let's try one more example:</p>
+
+
+          <!-- Codepen example -->
+          <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="ZEWYPWr"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="ZEWYPWr">
+            <span>See the Pen
+              <a href="https://codepen.io/LGundy/pen/ZEWYPWr">
+                ZEWYPWr</a> by Lindsey (
+              <a href="https://codepen.io/LGundy">@LGundy</a>) on
+              <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          <!-- End of codepen example -->
+
+          <p class="content">
+            We have declared another function but this time doing a math operation. When the button is clicked, the function will add
+            2 + 2 and assign 4 to the variable addition. Then display the results in the p tag within the html.</p>
+
+          <p class="content">
+            <b>**Key things</b> to remember when creating your own functions.
+            <ul>
+              <li>
+                Functions always start with the keyword
+                <b>"function"</b>, then () and enclose with {}.
+              </li>
+
+              <li>
+                Pick a naming convention style for consistency. Different styles include: Camel or Pascal case, just to name a few.
+              </li>
+
+              <li>
+                You can not use special characters in a function or start a function name with a number.
+              </li>
+            </ul>
+          </p>
+        </div>
+        <!-- End of Functions accordion section -->
+
+
+
+        <!-- Passing parameters in functions section -->
+        <h3 class="titles">1.2 - What are parameters in JavaScript?</h3>
+        <div>
+          <p class="content">
+            To take this a step further, we can also pass parameters into functions to use within the function itself.
+
+            <ul>
+              <li> The synax is similar to the previous section:
+              </li>
+            </ul>
+
+            <h4>Single parameter</h4>
+
+            <!-- code syntax example -->
+            <pre>function functionName(<i>parameter</i>){  statements  }</pre>
+
+            <h4>Multiple parameters</h4>
+            <pre>function functionName(<i>parameter, parameter</i>){  statements  }</pre>
+            <!-- End of code syntax example -->
+
+            <p class="content">
+              You can also pass multiple parameters and separate each witha comma. When declaring parameters for functions, their names
+              should be unique and are descriptive. Its also good to keep in mind parameters passed and are within the function,
+              will be local scope. This means, once our function is done running, the parameters will be forgotten until
+              the function is called again.
+              <br>
+              <br> Let's try an example to demonstrate that idea and we will work with our math function from the previous section
+              but revamp it with parameters.
+            </p>
+
+            <!-- Code pen example -->
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="XWdJGNB"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="XWdJGNB">
+              <span>See the Pen
+                <a href="https://codepen.io/LGundy/pen/XWdJGNB">
+                  XWdJGNB</a> by Lindsey (
+                <a href="https://codepen.io/LGundy">@LGundy</a>) on
+                <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <!-- End of codepen example -->
+
+
+            <p class="content">
+              When we pass parameters, we can define those within the function in the onclick event. The numbers can be changed within
+              the onclick function and will add the numbers accordingly. This can be very powerful with more complex projects.
+            </p>
+        </div>
+        <!-- End passing parameters section -->
+
+
+
+        <!-- returning values in functions section -->
+        <h3 class="titles">1.3 - How can functions return a value?</h3>
+        <div>
+          <p class="content">
+            Taking functions one step further, we can have our functions return values to us once they have been called. The
+            <b>"return"</b> keyword is used to make this happen. An important note is that once the return keyword is called,
+            any code following will be ignored and the function will exit.
+
+
+            <br>
+            <br> Let's take our math example again but return the value.
+            <br>
+
+
+            <!-- Codepen example -->
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="rNeaRzr"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="return params">
+              <span>See the Pen
+                <a href="https://codepen.io/LGundy/pen/rNeaRzr">
+                  return params</a> by Lindsey (
+                <a href="https://codepen.io/LGundy">@LGundy</a>) on
+                <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <!-- End of codepen example -->
+
+        </div>
+      </div>
+    </div>
+    <!-- End of returning values section -->
+
+
+    <!-- Conditional structures section -->
+    <div id="conditional-struct">
+      <div id="accordion" class="accordion">
+
+        <h3 class="titles">2.1 - What are conditional structures?</h3>
+        <div>
+          <p class="content">
+            We use conditional structure statements to test if a particular condition is true or false. There are a few different options
+            for conditionals depending on the action. The most common conditional statements are:
+            <ul>
+              <li>
+                if
+              </li>
+              <li>
+                if else
+              </li>
+              <li>
+                else if
+              </li>
+              <li>
+                switch case
+              </li>
+            </ul>
+
+        </div>
+        <!-- End of what are conditional structures section -->
+
+
+
+        <!-- if statement section -->
+        <h3 class="titles">2.2 - What are if statements?</h3>
+        <div>
+          <p class="content">
+            If statements are used to check if a condition is true. The written syntax for an if statement is as follows:
+
+            <!-- code syntax example -->
+            <pre>if (condition) { statement }</pre>
+            <!-- End of code syntax example -->
+
+            <!-- Codepen example -->
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="XWdJQJw"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="XWdJQJw">
+              <span>See the Pen
+                <a href="https://codepen.io/LGundy/pen/XWdJQJw">
+                  XWdJQJw</a> by Lindsey (
+                <a href="https://codepen.io/LGundy">@LGundy</a>) on
+                <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+            <!-- End of codepen example -->
+
+            <p class="content">In the example, the if statement will check to see if the "light" is on or off. Since the light is on, the result
+              is true and will update the p element.
+            </p>
+        </div>
+        <!-- End of if statment section -->
+
+
+        <!-- else statment section -->
+        <h3 class="titles">2.3 - What are else statements?</h3>
+        <div>
+          <p class="content">
+            With else statements, we are just adding another condition to the statement. In the previous example, we were testing to
+            see if something was true, now we can add an else condition in case something is false or does not match the
+            if condition.
+
+            <!-- Code syntax example -->
+            <pre>if (condition) { statement 1 } else  { statement 2 }</pre>
+            <!-- End of code syntax example -->
+
+            <!-- codepen example -->
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="jOqERbv"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="light switch">
+              <span>See the Pen
+                <a href="https://codepen.io/LGundy/pen/jOqERbv">
+                  light switch</a> by Lindsey (
+                <a href="https://codepen.io/LGundy">@LGundy</a>) on
+                <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+            <!-- End of codepen example -->
+
+            <p class="content">
+              When we click the turn on button, it will change the background colour and pass the parameter through the function. In the
+              same idea, when we click the turn off button, it will change the background to black because we passed "off"
+              as our parameter which matches our second condition.
+            </p>
+        </div>
+        <!--End of else statment section  -->
+
+
+
+        <!-- Else if section -->
+        <h3 class="titles">2.4 - What are else if statements?</h3>
+        <div>
+          <p class="content">
+
+            Else if statements are probably what you're thinking, we now add an additional condition to test. We have a total of three
+            conditions that are going to be tested to see if it matches our condition. This does take a lot of code but let's
+            take a look at an example to get a better understanding.
+
+            <br>
+
+            <!-- Codepen example -->
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="poyvBbq"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="alexa">
+              <span>See the Pen
+                <a href="https://codepen.io/LGundy/pen/poyvBbq">
+                  alexa</a> by Lindsey (
+                <a href="https://codepen.io/LGundy">@LGundy</a>) on
+                <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <!-- End of codepen example -->
+
+            <p class="content">
+              When we pass parameters, we can define those within the function in the onclick event. The numbers can be changed within
+              the onclick function and will add the numbers accordingly. This can be very powerful with more complex projects.
+            </p>
+        </div>
+        <!-- End of else if section -->
+
+
+
+        <!-- Switch statement section -->
+        <h3 class="titles">2.5 - What are switch statements?</h3>
+        <div>
+          <p class="content">
+            That’s a lot of code in the previous section… there has to be a better way. One option we can also dive into is a switch
+            statement. Switch statements work nicely when you’re checking against many possible options.
+
+            <br>
+            <h4>Advantages:</h4>
+            <ol>
+              <li>
+                Easy to read to the human eye and if any conditions might have been missed.
+              </li>
+              <li>
+                Simple to add more options if needed for case checks.
+              </li>
+              <li>
+                You can add multiple groupings to one single case.
+              </li>
+            </ol>
+
+            <h4>Limitations:</h4>
+
+            <ol>
+              <li>
+                The expression will only be evaluated once for the entire statement.
+              </li>
+              <li>
+                There needs to be an exact match when the cases are checked.
+              </li>
+            </ol>
+            <br>
+            <p class="content">How do we define a switch statement:</p>
+
+            <!-- Code syntax example -->
+            <pre class="switchSnippet">
+            switch (expression) {
+                case NUMBER1:
+                      // statement if matches NUMBER1
+                      break;
+                case NUMBER2:
+                case NUMBER3:
+                    // statement for NUMBER2 & NUMBER3
+                    //this is an example of grouping statements
+                      break;
+                case NUMBER4:
+                    // statement for N4
+                      break;
+                default:
+                    // default statement for anything 
+                    //that doesn't match previous.
+                      break;
+                  }
+                  </pre>
+            <!-- End code syntax eammple -->
+            <p class="content">
+              In the example below, we will use the .getDay() method to find out what day of the week it is. The getDay() method will return
+              a value from 0-6 with Sunday starting at 0. Next, the number will be tested against out switch cases and an
+              alert will tell the user what day of the week with a message.
+            </p>
+
+            <br>
+
+
+            <!-- Code Pen example -->
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="KKzwYqJ"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="KKzwYqJ">
+              <span>See the Pen
+                <a href="https://codepen.io/LGundy/pen/KKzwYqJ">
+                  KKtzwYqJ</a> by Lindsey (
+                <a href="https://codepen.io/LGundy">@LGundy</a>) on
+                <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <br>
+            <!--End of codepen example  -->
+
+
+            <p class="content">
+              When we pass parameters, we can define those within the function in the onclick event. The numbers can be changed within
+              the onclick function and will add the numbers accordingly. This can be very powerful with more complex projects.
+            </p>
+        </div>
+        <!--End of switch statement section  -->
+      </div>
+    </div>
+    <!-- End of conditional structures section -->
+
+
+
+    <!-- Array section -->
+    <div id="arrays-tab">
+      <div id="accordion" class="accordion">
+
+
+        <!-- What is an array -->
+        <h3>What is an array or collection?</h3>
+        <div>
+          <p class="content">
+            An array or collection is a type of variable that can hold many types of values within one variable. Keep in mind, arrays
+            should hold variables of the same type within their collection. This could be a collection of strings, integers,
+            or other variable types used in JavaScript.
+
+          </p>
+        </div>
+        <!-- End of what is an array -->
+
+
+
+        <!-- How do we create arrays section -->
+        <h3>How do we create arrays?</h3>
+        <div>
+          <p class="content">
+            We can declare an array by using the following:
+          </p>
+
+          <!-- Code syntax example -->
+          <pre>var newArray = []; </pre>
+          <!-- End code syntax example -->
+
+          <p class="content">
+            Where "newArray" will be the name we define for our array. We add items to an array manually but placing the items within
+            "" and in the []. We can use strings, numbers and even objects within arrays for more complex code!
+            <br>
+            <br>Let's start simple and make an array of fruits.
+          </p>
+
+          <!-- Code syntax example -->
+          <pre>var fruits = [‘apples’, ‘oranges’, ‘banana’, ‘watermelon’];</pre>
+          <!-- End of code syntax example -->
+
+          <p class="content">
+            Awesome! We now have our array of fruits ready to go. Its also important to note that when you want to display a particular
+            item from within the array, you can access it by its
+            <b>index</b> value. The index refers to the position of the value in the array. To be a little tricky, array index
+            values start at 0 and that can often be forgotten. Let's say we want to access the oranges item from the array.
+          </p>
+
+          <!-- Code syntax example -->
+          <pre>console.log(fruits[1]);</pre>
+          <!-- End of syntax example -->
+
+          <p class="content">
+            We would see the item "oranges" in our console and we can do the same for the other fruits. Arrays also have a few Document
+            Object Model (DOM) methods built in that we can use to manipulate or find out more information about arrays or
+            collections. Some of those methods include:
+            <br>
+            <br>
+            <ul>
+              <li>
+                Array.length: it will give us the total length of the array (number of items within the array).
+              </li>
+              <li>
+                Array.push(): We can add something to the end of the array by “pushing” it.
+              </li>
+              <li>
+                Array.pop(): It will remove the last item in an array.
+              </li>
+              <li>
+                Array.shift(): this will remove the first item from the array list.
+              </li>
+
+              <li>
+                Array.sort(): will sort the items inside the array in ascending order.
+              </li>
+            </ul>
+          </p>
+
+          <br>
+
+          <!-- Codepen Example -->
+          <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="oNxXdxj"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="oNxXdxj">
+            <span>See the Pen
+              <a href="https://codepen.io/LGundy/pen/oNxXdxj">
+                oNxXdxj</a> by Lindsey (
+              <a href="https://codepen.io/LGundy">@LGundy</a>) on
+              <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          <!-- End of codepen example -->
+
+
+          <p class="content">
+            <br> There are even more methods that are provided and
+            <a href="https://www.w3schools.com/js/js_arrays.asp">
+              <b>W3Schools</b>
+            </a> is a great resource to read up on additional methods. Array example modified from W3schools.
+          </p>
+        </div>
+        <!-- End of creating arrays section -->
+
+
+        <h3>How to traverse an array?</h3>
+        <div>
+          <p class="content">
+            Traversing an array will print all the values within the array if we are not looking for a particular index value and just
+            want to see what is in our array collection. We can do this with a simple for loop and it will do most of the
+            work for us.
+          </p>
+
+          <!-- Code syntax example -->
+          <pre>for (initialization; condition; increment/decrement) { // code to be executed }  </pre>
+          <!-- End of code syntax example -->
+
+          <br>
+
+          <!-- Codepen example -->
+          <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="LGundy" data-slug-hash="dyMoeJp"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="traverse array">
+            <span>See the Pen
+              <a href="https://codepen.io/LGundy/pen/dyMoeJp">
+                traverse array</a> by Lindsey (
+              <a href="https://codepen.io/LGundy">@LGundy</a>) on
+              <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          <!-- End of codepen example -->
+
+
+          <br>
+          <p class="content">
+            The for loop will iterate over each item within the array and we have to keep in mind that arrays start with a 0 index. Therefore,
+            we start at zero and end with the array minus 1. Once the loop is at the end of the array, it will break out
+            of the loop and print the results to the console.
+
+            <br>
+            <br>
+            <b>**Note:</b> Be careful when writing out loops, be sure that you double check your conditions and statements.
+            Speaknig from experience, its very easy to end up in an infinite loop which will potentially crash your program.
+            Starting with i as our counter, this will be used as a counter for our array and determine when the end of the
+            array. Once i is less than the array.length value (which is 4 in our case) It will stop looping through the array
+            and the values will be printed to the console.
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of array section -->
+
+  <br>
+  <br>
+
+
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Lindsey Gunderson
+      <br> MDIA 2294 - Web Scripting 1
+      <br> BCIT New Media and Web Development Program
+    </p>
+  </div>
+
+
+  
+  <script src="js/script.js"></script>
+</body>
+
+</html>
